@@ -14,17 +14,17 @@
 ###    These objects are then converted to HTML in a second queue and sent as emails via AWS Simple Email Service.
 ###    The variable define_queue should then be changed to send the JSON objects to a different queue
 
-#					#
-#	Import all      #
-#					#
+#
+#	Import all
+#
 import boto3
 import json
 import csv
 from Message import Message
 
-#								#
-#	Define the SQS Services     #
-#								#
+#
+#	Define the SQS Services
+#
 
 # Input SQS queue to be delivered to:
 define_queue = # Define your queue here
@@ -33,9 +33,9 @@ define_queue = # Define your queue here
 sqs = boto3.resource('sqs')
 queue = sqs.get_queue_by_name(QueueName= define_queue)
 
-#               #
-#   CSV Work    #
-#               #
+#
+#   CSV Work
+#
 
 # Start counter
 i = 0
